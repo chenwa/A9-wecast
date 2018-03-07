@@ -2,7 +2,21 @@
 
 <html>
 <head>
-	<title>WeCast</title>	
+
+	<!--Google Analytics -->
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-114655521-2', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+	<title>WeCast</title>
 
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,18 +57,18 @@
   <div class="container">
     <div class="page-title">
       <h4>Lecture Notes</h4>
-    </div> 
+    </div>
 
     <!-- Everything Here -->
     <div class = "all_btn">
-      <div class="row"> <!-- recording bar --> 
+      <div class="row"> <!-- recording bar -->
         <div id="bkmkIcon">
           <a href = "#bookmarkIcon" class="modal-toggle" data-toggle="modal" data-target="#bookmarkIcon">
               <img src = "/pics/bookmark_icon.png" width = "40" height = "40">
           </a>
         </div>
-        
-        <div id="imgIcon">  
+
+        <div id="imgIcon">
           <a href = "#imageIcon" class="modal-toggle" data-toggle="modal" data-target="#imageIcon">
             <img src = "/pics/image_annotation_icon.png" width = "40" height = "40">
           </a>
@@ -65,7 +79,7 @@
             <td><img src = "/pics/recording_bar.png" width = "270" height = "180" id="recordBar"></td>
           </tr>
         <tr>
-          <td id ="time"><h2>5:20</h2></td> <!--recording time--> 
+          <td id ="time"><h2>5:20</h2></td> <!--recording time-->
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
@@ -74,8 +88,8 @@
       </div>
 
 
-       <table id = "wrapper_btn"> <!-- 3/1/2018 edit --> 
-        <tr> <!-- for bookmark and camera --> 
+       <table id = "wrapper_btn"> <!-- 3/1/2018 edit -->
+        <tr> <!-- for bookmark and camera -->
           <td id = "round_bookmark">
             <a href = "#bookmark" class="modal-toggle" id ="round_bookmark" data-toggle="modal" data-target="#bookmark">
             <img src = "/pics/round_bookmark.png" width = "70" height = "70"></a>
@@ -110,15 +124,15 @@
         </tr>
       </table>
 
-       <!-- After the Done Button was pressed --> 
+       <!-- After the Done Button was pressed -->
        <div class ="tab">
         <table id="wrapper_tab" style ="width:100%">
           <tr>
-           <th><button class="tablinks" onclick="openTab(event, 'bookmark')" id="defaultOpen">Bookmark</button></th>
-           <th colspan ="2"><button class="tablinks" onclick="openTab(event, 'picture')">Picture</button></th>
+           <th><button class="tablinks book_mark" onclick="openTab(event, 'bookmark')" id="defaultOpen">Bookmark</button></th>
+           <th colspan ="2"><button class="tablinks pics" onclick="openTab(event, 'picture')">Picture</button></th>
          </tr>
        </table>
-       </div> <!-- end of tab --> 
+       </div> <!-- end of tab -->
 
        <!-- Tab content -->
        <div class="scrollmenu" >
@@ -153,7 +167,7 @@
        </div>
       </div>
      </div> <!-- end of popup-->
-   </div> <!-- end of current button --> 
+   </div> <!-- end of current button -->
 
 
   </div>
@@ -161,7 +175,7 @@
   <div class = "back">
     <a href = "/folder/{{folderID}}"><img src = "/pics/arrow.png" width="55" height = "55"></a>
   </div>
-  <!-- end of back button --> 
+  <!-- end of back button -->
 
   <!-- Modal -->
   <div class="modal fade" id="camera" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">

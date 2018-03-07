@@ -43,7 +43,7 @@ $("#snap").click(function() {
   $("#retake").show();
 });
 
-//Retake Photo 
+//Retake Photo
 $("#retake").click(function() {
   //Change buttons
   $("#video").show();
@@ -118,8 +118,26 @@ function openTab(evt, twoContent) {
 
 //Sample Function
 function initializePage(){
-	console.log("Javascript connected!");  
+	console.log("Javascript connected!");
   $("#recordButton2").hide();
   $("#roundAudio2").hide();
   $(".tab").hide();
+
+  $(".book_mark").click(bookmark_btn);
+  $(".pics").click(pics_btn);
+}
+
+//get event and send it to Google Analytics
+function bookmark_btn(e) {
+  e.preventDefault();
+  console.log('button clicked');
+  ga('create', 'UA-114655521-2', 'auto');
+  ga("send", "event", "Bookmark_B", "click");
+}
+
+function pics_btn(e) {
+  e.preventDefault();
+  console.log('button clicked');
+  ga('create', 'UA-114655521-2', 'auto');
+  ga("send", "event", "Pictures_B", "click");
 }

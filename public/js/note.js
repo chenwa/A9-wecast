@@ -43,7 +43,7 @@ $("#snap").click(function() {
   $("#retake").show();
 });
 
-//Retake Photo 
+//Retake Photo
 $("#retake").click(function() {
   //Change buttons
   $("#video").show();
@@ -85,15 +85,29 @@ $("#roundAudio2").click(function() {
   $("#roundAudio2").hide();
 });
 
-$("#bookmarkIcon").click(function() {
+//Google Analytics for Page A- pictures
+$("#imageIcon").click(function(e) {
   //Notify Google Analytics that it was clicked.
+  e.preventDefault();
+  console.log('button clicked');
+  ga('create', 'UA-114655521-2', 'auto');
+  ga("send", "event", "Pictures_A", "click");
 
+});
+
+//Google Analytics for Page A- bookmarks
+$("#bookmarkIcon").click(function(e) {
+  //Notify Google Analytics that it was clicked.
+  e.preventDefault();
+  console.log('button clicked');
+  ga('create', 'UA-114655521-2', 'auto');
+  ga("send", "event", "Bookmark_A", "click");
   /* Google Analytics code here? */
 });
 
 //Sample Function
 function initializePage(){
-	console.log("Javascript connected!");  
+	console.log("Javascript connected!");
   $("#recordButton2").hide();
   $("#roundAudio2").hide();
 }
