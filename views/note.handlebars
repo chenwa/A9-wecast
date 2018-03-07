@@ -65,13 +65,25 @@ ga('send', 'pageview');
 
     <!-- Everything Here -->
     <div class = "all_btn">
-      <div class="row"> <!-- recording bar --> 
+      <div class="row"> <!-- recording bar -->
+        <div id="bkmkIcon">
+          <a href = "#bookmarkIcon" class="modal-toggle" data-toggle="modal" data-target="#bookmarkIcon">
+              <img src = "/pics/bookmark_icon.png" width = "40" height = "40">
+          </a>
+        </div>
+
+        <div id="imgIcon">
+          <a href = "#imageIcon" class="modal-toggle" data-toggle="modal" data-target="#imageIcon">
+            <img src = "/pics/image_annotation_icon.png" width = "40" height = "40">
+          </a>
+        </div>
+
         <table id = "wrapper" cellspacing="10">
           <tr>
-          <td><img src = "/pics/recording_bar.png" width = "270" height = "170"></td>
-        </tr>
+            <td><img src = "/pics/recording_bar.png" width = "270" height = "180" id="recordBar"></td>
+          </tr>
         <tr>
-          <td id ="time"><h2>5:20</h2></td> <!--recording time--> 
+          <td id ="time"><h2>5:20</h2></td> <!--recording time-->
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
@@ -115,7 +127,7 @@ ga('send', 'pageview');
             <button type="button" id="recordButton2" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-stop"></i></button>
             </td>
           <td colspan="6">
-            <a href = "/note_function"><button type="button" id="settingsPopover" class="btn btn-default btn-lg">Done</button>
+            <a href = "#doneBtn" class="modal-toggle" data-toggle="modal" data-target="#doneBtn"><button type="button" id="settingsPopover" class="btn btn-default btn-lg">Done</button></a>
           <td colspan="7"></td>
          <td colspan="8"></td>
          <td colspan="9"></td>
