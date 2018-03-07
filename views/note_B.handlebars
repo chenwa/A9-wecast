@@ -92,11 +92,11 @@ ga('send', 'pageview');
         <tr> <!-- for bookmark and camera -->
           <td id = "round_bookmark">
             <a href = "#bookmark" class="modal-toggle" id ="round_bookmark" data-toggle="modal" data-target="#bookmark">
-            <img src = "/pics/round_bookmark.png" width = "70" height = "70"></a>
+           <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-bookmark"></i></button></i></button></a>
             </td>
           <td colspan="2" id="round_camera">
             <a href="#camera" class="modal-toggle" id="round_camera" data-toggle="modal" data-target="#camera">
-              <img src = "/pics/round_camera.png" width = "70" height = "70">
+              <button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-camera"></i></button>
             </a>
           </td>
         </tr>
@@ -108,14 +108,15 @@ ga('send', 'pageview');
           <td colspan = "2"></td>
           <td colspan = "3"></td>
           <td colspan = "4">
-            <a href = "/note_function" id = "mic_btn"><img src = "/pics/round_audio.png" width = "70" height = "70" id="roundAudio"></a>
+            <button type="button" id="muteButton" class="btn btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-volume-up"></i></button>
+            <button type="button" id="unmuteButton" class="btn btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-volume-off"></i></button></a>
           </td>
           <td colspan="5" id ="recording_btn">
-            <img src = "/pics/red_record.png" width = "70" height = "70" id="recordButton">
-            <img src = "/pics/red_pause.png" width = "70" height = "70" id="recordButton2">
+            <button type="button" id="recordButton" class="btn btn-danger btn-circle btn-xl btn-record"><i class="glyphicon glyphicon-record" style="text-align: center;"></i></button>
+            <button type="button" id="recordButton2" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-stop"></i></button>
             </td>
           <td colspan="6">
-            <img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton" onclick="doneFunction()">
+            <button type="button" id="doneButton" class="btn btn-default btn-lg" onclick='doneFunction()'>Done</button>
           </td>
           <td colspan="7"></td>
          <td colspan="8"></td>
@@ -128,7 +129,7 @@ ga('send', 'pageview');
        <div class ="tab">
         <table id="wrapper_tab" style ="width:100%">
           <tr>
-           <th><button class="tablinks book_mark" onclick="openTab(event, 'bookmark')" id="defaultOpen">Bookmark</button></th>
+           <th><button class="tablinks book_mark" onclick="openTab(event, 'bookmarkTab')" id="defaultOpen">Bookmark</button></th>
            <th colspan ="2"><button class="tablinks pics" onclick="openTab(event, 'picture')">Picture</button></th>
          </tr>
        </table>
@@ -136,7 +137,7 @@ ga('send', 'pageview');
 
        <!-- Tab content -->
        <div class="scrollmenu" >
-       <div id = "bookmark" class ="tabcontent">
+       <div id = "bookmarkTab" class ="tabcontent">
          <p>Lorem ipsum dolor sit amet</p>
          <br>
          <p>Duis aute irure dolor in reprehenderit</p>

@@ -73,6 +73,18 @@ $("#recordButton2").click(function() {
   $("#recordButton").show();
 });
 
+$("#muteButton").click(function() {
+  //Change buttons
+  $("#unmuteButton").show();
+  $("#muteButton").hide();
+});
+
+$("#unmuteButton").click(function() {
+  //Change buttons
+  $("#unmuteButton").hide();
+  $("#muteButton").show();
+});
+
 $("#roundAudio").click(function() {
   //Change buttons
   $("#roundAudio2").show();
@@ -110,4 +122,7 @@ function initializePage(){
 	console.log("Javascript connected!");
   $("#recordButton2").hide();
   $("#roundAudio2").hide();
+  $("#unmuteButton").hide();
 }
+
+//Button Icon Swappers

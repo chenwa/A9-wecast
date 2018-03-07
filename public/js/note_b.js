@@ -73,6 +73,18 @@ $("#recordButton2").click(function() {
   $("#recordButton").show();
 });
 
+$("#muteButton").click(function() {
+  //Change buttons
+  $("#unmuteButton").show();
+  $("#muteButton").hide();
+});
+
+$("#unmuteButton").click(function() {
+  //Change buttons
+  $("#unmuteButton").hide();
+  $("#muteButton").show();
+});
+
 $("#roundAudio").click(function() {
   //Change buttons
   $("#roundAudio2").show();
@@ -88,8 +100,10 @@ $("#roundAudio2").click(function() {
 //Done button pressed
 function doneFunction(){
 
-  $("#mic_btn").hide();
+  $("#muteButton").hide();
+  $("#unmuteButton").hide();
   $("#recording_btn").hide();
+  $("#recording_btn2").hide();
   $("#round_camera").hide();
   $("#round_bookmark").hide();
   $("#doneButton").hide();
@@ -122,6 +136,7 @@ function initializePage(){
   $("#recordButton2").hide();
   $("#roundAudio2").hide();
   $(".tab").hide();
+  $("#unmuteButton").hide();
 
   $(".book_mark").click(bookmark_btn);
   $(".pics").click(pics_btn);

@@ -24,7 +24,11 @@ ga('send', 'pageview');
   <!--CSS Files -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet"><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -61,25 +65,13 @@ ga('send', 'pageview');
 
     <!-- Everything Here -->
     <div class = "all_btn">
-      <div class="row"> <!-- recording bar -->
-        <div id="bkmkIcon">
-          <a href = "#bookmarkIcon" class="modal-toggle" data-toggle="modal" data-target="#bookmarkIcon">
-              <img src = "/pics/bookmark_icon.png" width = "40" height = "40">
-          </a>
-        </div>
-
-        <div id="imgIcon">
-          <a href = "#imageIcon" class="modal-toggle" data-toggle="modal" data-target="#imageIcon">
-            <img src = "/pics/image_annotation_icon.png" width = "40" height = "40">
-          </a>
-        </div>
-
+      <div class="row"> <!-- recording bar --> 
         <table id = "wrapper" cellspacing="10">
           <tr>
-            <td><img src = "/pics/recording_bar.png" width = "270" height = "180" id="recordBar"></td>
-          </tr>
+          <td><img src = "/pics/recording_bar.png" width = "270" height = "170"></td>
+        </tr>
         <tr>
-          <td id ="time"><h2>5:20</h2></td> <!--recording time-->
+          <td id ="time"><h2>5:20</h2></td> <!--recording time--> 
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
@@ -87,19 +79,19 @@ ga('send', 'pageview');
         </table>
       </div>
 
-       <table id = "wrapper_btn"> <!-- 3/1/2018 edit -->
-        <tr>
+       <table id = "wrapper_btn"> <!-- 3/1/2018 edit --> 
+        <tr> 
           <td></td>
           <td colspan = "2"></td>
           <td colspan = "3"></td>
           <td colspan = "4"></td>
           <td colspan="5">
             <a href = "#bookmark" class="modal-toggle" data-toggle="modal" data-target="#bookmark">
-            <img src = "/pics/round_bookmark.png" width = "70" height = "70"></a>
+            <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-bookmark"></i></button></i></button></a>
             </td>
           <td colspan="6">
             <a href="#camera" class="modal-toggle" data-toggle="modal" data-target="#camera">
-              <img src = "/pics/round_camera.png" width = "70" height = "70">
+              <button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-camera"></i></button>
             </a>
           </td>
           <td colspan="7"></td>
@@ -109,21 +101,21 @@ ga('send', 'pageview');
         </tr>
       </table>
 
-      <table id= "wrapper_btn">
+      <table id= "wrapper_btn"> 
         <tr>
           <td></td>
           <td colspan = "2"></td>
           <td colspan = "3"></td>
           <td colspan = "4">
-            <a href = "/note_function"><img src = "/pics/round_audio.png" width = "70" height = "70" id="roundAudio"></a>
+            <button type="button" id="muteButton" class="btn btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-volume-up"></i></button>
+            <button type="button" id="unmuteButton" class="btn btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-volume-off"></i></button>
           </td>
           <td colspan="5">
-            <img src = "/pics/red_record.png" width = "70" height = "70" id="recordButton">
-            <img src = "/pics/red_pause.png" width = "70" height = "70" id="recordButton2">
+            <button type="button" id="recordButton" class="btn btn-danger btn-circle btn-xl btn-record"><i class="glyphicon glyphicon-record" style="text-align: center;"></i></button>
+            <button type="button" id="recordButton2" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-stop"></i></button>
             </td>
           <td colspan="6">
-            <a href = "/note_function"><img src = "/pics/done_btn.png" width = "65" height = "55" id="doneButton"></a>
-          </td>
+            <a href = "/note_function"><button type="button" id="settingsPopover" class="btn btn-default btn-lg">Done</button>
           <td colspan="7"></td>
          <td colspan="8"></td>
          <td colspan="9"></td>
