@@ -1,7 +1,18 @@
 var data = require("../data.json");
 var _ = require('underscore');
 
-exports.editFolder = function(req, res) {   
+exports.deleteFolder = function(req, res){
+  //Delete Folder
+  for(var i = 0; i < _.size(data.folders); i++){
+    if(data.folders[i].folderID == req.params.folderID){
+      data.folders.splice(i,1);
+      break;
+    }
+  }    
+  res.redirect('/index');      
+};
+
+exports.editFolder = function(req, res){   
   //Change Folder Name
   if(req.query.newFolderName != (null || '' || "")){
     for(var i = 0; i < _.size(data.folders); i++){
@@ -11,20 +22,8 @@ exports.editFolder = function(req, res) {
       }
     }
   }
-  //Delete Folder
-  if(req.query.confirmDelete == "DELETE"){
-    for(var i = 0; i < _.size(data.folders); i++){
-      if(data.folders[i].folderID == req.params.folderID){
-        data.folders.splice(i,1);
-        break;
-      }
-    }    
-  }
+
   console.log(data);
-  if(req.query.confirmDelete == "DELETE"){
-    res.redirect('/index');
-  } 
-  else{ 
-    res.redirect('/folder/' + req.params.folderID);
-  }
+
+  res.redirect('/folder/' + req.params.folderID);
 };

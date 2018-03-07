@@ -25,6 +25,13 @@ function closeSettings(){
   $("#settingsPopover").popover("hide");
 }
 
+//Confirm Delete
+function confirmDelete() {
+    var ask = window.confirm("Permenantly delete folder? All notes will be lost.");
+    if (ask) {
+      window.location.href = "/deleteFolder/{{folderID}}";
+    }
+}
 //Sample Function
 function initializePage(){
 	console.log("Javascript connected!");  

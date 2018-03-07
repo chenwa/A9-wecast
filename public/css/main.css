@@ -12,7 +12,9 @@
 h4 {
 	display: inline-block;
 }
-
+.deleteIcon {
+  float: right;
+}
 .page-title {
 	text-align: center;
 }
