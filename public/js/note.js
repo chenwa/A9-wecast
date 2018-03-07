@@ -85,6 +85,12 @@ $("#roundAudio2").click(function() {
   $("#roundAudio2").hide();
 });
 
+$("#bookmarkIcon").click(function() {
+  //Notify Google Analytics that it was clicked.
+
+  /* Google Analytics code here? */
+});
+
 //Sample Function
 function initializePage(){
 	console.log("Javascript connected!");  

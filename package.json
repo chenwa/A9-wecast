@@ -18,8 +18,8 @@
     "handlebars-group-every": "*",
     "mongodb": "*",
     "mongoose": "*",
-    "underscore":"*",
-    "uniqid":"*"
+    "underscore": "*",
+    "uniqid": "*"
   },
   "engines": {
     "node": "*"

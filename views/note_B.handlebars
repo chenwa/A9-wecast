@@ -42,24 +42,37 @@
 
   <div class="container">
     <div class="page-title">
-      <h4>Note Title</h4>
+      <h4>Lecture Notes</h4>
     </div> 
 
     <!-- Everything Here -->
     <div class = "all_btn">
       <div class="row"> <!-- recording bar --> 
+        <div id="bkmkIcon">
+          <a href = "#bookmarkIcon" class="modal-toggle" data-toggle="modal" data-target="#bookmarkIcon">
+              <img src = "/pics/bookmark_icon.png" width = "40" height = "40">
+          </a>
+        </div>
+        
+        <div id="imgIcon">  
+          <a href = "#imageIcon" class="modal-toggle" data-toggle="modal" data-target="#imageIcon">
+            <img src = "/pics/image_annotation_icon.png" width = "40" height = "40">
+          </a>
+        </div>
+
         <table id = "wrapper" cellspacing="10">
           <tr>
-          <td><img src = "/pics/recording_bar.png" width = "270" height = "170"></td>
-        </tr>
+            <td><img src = "/pics/recording_bar.png" width = "270" height = "180" id="recordBar"></td>
+          </tr>
         <tr>
-          <td><h2 id="time">5:20</h2></td> <!--recording time--> 
+          <td id ="time"><h2>5:20</h2></td> <!--recording time--> 
         </tr>
         <tr>
           <td> <img src = "/pics/reminder.png" width = "275" height = "34"></td>
         </tr>
         </table>
       </div>
+
 
        <table id = "wrapper_btn"> <!-- 3/1/2018 edit --> 
         <tr> <!-- for bookmark and camera --> 
@@ -215,6 +228,32 @@
             <button id="savePhoto" type="button" data-dismiss="modal" class="btn btn-primary">Continue Recording</button>
             <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="doneFunction()">Finalize</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for bookmark icon -->
+  <div class="modal fade" id="bookmarkIcon" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">5:20: Review chapters 5-7 for midterm.</h5>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image annotation icon -->
+  <div class="modal fade" id="imageIcon" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">6:30: Lab 2 Demo</h5>
+          <img src = "/pics/lec_2.jpg" width = "200" height = "200">
+          <br></br>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

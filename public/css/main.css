@@ -9,6 +9,20 @@
 	color: #CC00AA;
 }
 
+#recordBar {
+  z-index: -1;
+}
+
+#imgIcon {
+  position: absolute;
+  left: 202px;
+ }
+
+#bkmkIcon {
+  position: absolute;
+  left: 85px;
+ }
+
 h4 {
 	display: inline-block;
 }
