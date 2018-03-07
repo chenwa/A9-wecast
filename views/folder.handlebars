@@ -42,8 +42,7 @@
 
   <div class="container">
     <div class="folder-title">
-      <h4>{{folderName}}</h4>
-
+      <h4>{{folderName}} <span id="syncIcon" class="glyphicon glyphicon-refresh green" style="color:#5cb85c;"></h4>
       <!--Folder Settings Button-->
       <div class ="container settings">
         <button type="button" id="settingsPopover" class="btn btn-default btn-sm" data-placement="bottom" data-toggle="popover" data-trigger="click" data-html="true" 
@@ -70,7 +69,7 @@
           <form id='changeSync' role='form' method='get' action='/changeSync/{{folderID}}'> 
             <input type='text' class='form-control' id='syncCode' placeholder='{{syncCode}}' name='syncCode'>
           </form>
-          Adding a Sync Code will sync your notes with other people using the same code (Change this text)
+          Adding a Sync Code will sync your notes with other people using the same code.  
           ">Sync
         </button>
       </div>
@@ -153,6 +152,11 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
   <script>
+    window.onload = function(){
+      if(("{{syncCode}}" == ("none" || "" || null)) || ("{{syncCode}}".length ===0)){
+        $("#syncIcon").hide();
+      }
+    }
     function confirmDelete() {
         var ask = window.confirm("Permenantly delete folder? All notes will be lost.");
         if (ask) {
