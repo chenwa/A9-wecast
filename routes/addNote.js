@@ -1,4 +1,6 @@
 var data = require("../data.json");
+//Give each note a unique ID
+var uniqid = require('uniqid');
 
 exports.addNote = function(req, res) {   
   
@@ -8,6 +10,8 @@ exports.addNote = function(req, res) {
   newNote.name = req.query.name;
   newNote.date = "placeholder";
   newNote.folder = req.params.folderID;
+  newNote.noteID = uniqid();
+
   data.notes.push(newNote);
 
   console.log(data);
