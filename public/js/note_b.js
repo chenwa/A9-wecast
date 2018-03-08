@@ -104,8 +104,6 @@ function doneFunction(){
   $("#unmuteButton").hide();
   $("#recording_btn").hide();
   $("#recording_btn2").hide();
-  $("#round_camera").hide();
-  $("#round_bookmark").hide();
   $("#doneButton").hide();
   $("#time").hide();
   $(".tab").show();
