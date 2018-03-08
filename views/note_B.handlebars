@@ -56,7 +56,7 @@ ga('send', 'pageview');
 
   <div class="container">
     <div class="page-title">
-      <h4>Lecture Notes</h4>
+      <h4>Notes</h4>
     </div>
 
     <!-- Everything Here -->
@@ -92,7 +92,7 @@ ga('send', 'pageview');
         <tr> <!-- for bookmark and camera -->
           <td id = "round_bookmark">
             <a href = "#bookmark" class="modal-toggle" id ="round_bookmark" data-toggle="modal" data-target="#bookmark">
-           <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-bookmark"></i></button></i></button></a>
+           <button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-bookmark"></i></button></a>
             </td>
           <td colspan="2" id="round_camera">
             <a href="#camera" class="modal-toggle" id="round_camera" data-toggle="modal" data-target="#camera">
@@ -180,15 +180,24 @@ ga('send', 'pageview');
   </div>
   <!-- end of back button -->
 
-  <!-- Modal -->
+  <!-- help button -->
+  <div id="helpBtn">
+    <a href = "#helpButton" class="modal-toggle" data-toggle="modal" data-target="#helpButton">
+      <img src = "/pics/help.png" width="70" height = "70">
+    </a>
+  </div>
+  <!-- end of help button -->
+
+  <!-- Modal for camera -->
   <div class="modal fade" id="camera" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Camera</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="modalLabel">Camera
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
         </div>
         <div class="modal-body">
           <video id="video" width="100%" height="100%" autoplay></video>
@@ -211,10 +220,11 @@ ga('send', 'pageview');
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Bookmark</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="modalLabel">Bookmark
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
         </div>
         <div class="modal-body">
 
@@ -234,10 +244,11 @@ ga('send', 'pageview');
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Finish Recording?</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="modalLabel">Finish Recording?
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
         </div>
         <div class="modal-body">
           <p>You're about to save your note recording. You will be unable to change your audio afterward. Are you sure you want to finalize it?</p>
@@ -255,7 +266,12 @@ ga('send', 'pageview');
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">5:20: Review chapters 5-7 for midterm.</h5>
+          <h5 class="modal-title" id="modalLabel">5:20
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <p>Review chapters 5-7 for midterm.</p>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -267,9 +283,63 @@ ga('send', 'pageview');
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">6:30: Lab 2 Demo</h5>
+          <h5 class="modal-title" id="modalLabel">6:30
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <p>Lab 2 Demo</p>
           <img src = "/pics/lec_2.jpg" width = "200" height = "200">
           <br></br>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for help button -->
+  <div class="modal fade" id="helpButton" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Help
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </h5>
+          <img src = "/pics/bookmark_icon.png" width = "50" height = "50">
+          Bookmark annotation
+          
+          <img src = "/pics/image_annotation_icon.png" width = "50" height = "50">
+          Picture annotation
+          
+          <img src = "/pics/recording_bar.png" width = "80%" height = "auto">
+          <p>Audio recording bar</p>
+
+          <img src = "/pics/time.png" width = "30%" height = "auto">
+          Current recording time
+          <br></br>
+
+          <i class="glyphicon glyphicon-bookmark"></i>
+          Adds bookmark to current time
+          <br></br>
+          
+          <i class="glyphicon glyphicon-camera"></i>
+          Adds picture to current time
+          <br></br>
+
+          <i class="glyphicon glyphicon-volume-up"></i>
+          Mutes or unmutes audio
+          <br></br>
+
+          <i class="glyphicon glyphicon-record" style="text-align: center;"></i>
+          Begins or stops recording
+          <br></br>
+
+          <img src = "/pics/done.png" width = "35%" height = "auto">
+          Saves recording
+          <br></br>
+          
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

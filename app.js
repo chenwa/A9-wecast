@@ -75,6 +75,7 @@ app.get('/addNote/:folderID', addNote.addNote);
 app.get('/changeSync/:folderID', changeSync.changeSync);
 app.get('/editFolder/:folderID', editFolder.editFolder);
 app.get('/deleteFolder/:folderID', editFolder.deleteFolder);
+app.get('/deleteNote/:noteID/:folderID', editFolder.deleteNote);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

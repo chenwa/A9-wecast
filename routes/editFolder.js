@@ -27,3 +27,18 @@ exports.editFolder = function(req, res){
 
   res.redirect('/folder/' + req.params.folderID);
 };
+
+exports.deleteNote = function(req, res){   
+  //Delete a note
+  for(var i = 0; i < _.size(data.notes); i++){
+    if(data.notes[i].noteID == req.params.noteID){
+      data.notes.splice(i,1);
+      break;
+    }
+  }
+  
+
+  console.log(data);
+
+  res.redirect('/folder/' + req.params.folderID);
+};
