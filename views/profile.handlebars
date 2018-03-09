@@ -11,6 +11,7 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/main.css" rel="stylesheet">
+  <script src ="/js/profile.js"></script>
 
 </head>
 
@@ -56,7 +57,8 @@
         <tr>
           <td>
             <br>
-            <button type="button" class="btn btn-info">Change Password</button>
+                          <!-- where the error occurred --> 
+            <button id="myBtn" class="btn btn-secondary">Change Password</button>
               <!-- The Modal -->
               <div id="myModal" class="modal">
 
@@ -69,7 +71,7 @@
                   <table id ="wrapper">
                     <tr>
                       <td>
-                        <label for = "exampleInputEmail">Current Password</label>
+                        <label for = "exampleInputPW">Current Password</label>
                     <input type = "password" class = "form-control" name = "password" placeholder= "Enter current password">
                        </td>
                     </tr>
@@ -87,7 +89,7 @@
                   <table id = "wrapper">
                     <tr>
                       <td>
-                        <label for = "exampleInputPW">Repeat Password</label>
+                        <label for = "exampleInputPW">Repeat New Password</label>
                         <input type = "password" class = "form-control" name = "password" placeholder= "Retype new password">
                       </td>
                     </tr>
@@ -104,6 +106,7 @@
                 </div>
                 <!-- end of Modal content (popup window) --> 
               </div>
+
           </td>
         </tr>
      </table>
